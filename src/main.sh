@@ -127,11 +127,11 @@ echo "##########################################################"
 echo "                       GO INSTALLED                       "
 echo "##########################################################"
 echo "##########################################################"
-echo "              INSTALLING MAKE, GCC, JQ and GIT            "
+echo "           INSTALLING WGET MAKE, GCC, JQ and GIT          "
 echo "##########################################################"
 read -p "Press Enter to continue or CTRL-C to cancel"
 
-reqApp=(git make gcc jq)
+reqApp=(wget git make gcc jq)
 
 function install_apps_basics() {
   sudo apt install $@ -y
