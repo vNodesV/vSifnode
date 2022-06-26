@@ -3,6 +3,7 @@
 
 
 ### To be installed:
+- WGET
 - GIT
 - GCC
 - Make
@@ -16,7 +17,7 @@
 
 ### Process: 
    - Update and Upgrade OS. 
-- Check for GIT, GCC, Make and jq.
+- Check for WGET GIT, GCC, Make and jq.
     - Install missing, if any. 
 - Check for previous version of GO<
     - remove older version from $HOME and/or /usr/local/bin/<
