@@ -1,4 +1,7 @@
 #!/bin/bash
+set -e
+echo $?
+
 #####CHANGE THESE#########################################
 ## visit go.dev/dl and copy/paste your desired version. ##
 ##########################################################
