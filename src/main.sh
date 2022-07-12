@@ -150,7 +150,7 @@ fi
 }
 function giti() {
   # if command cd; then
-    if git checkout v0.13.3 && make clean install; then
+    if git checkout v0.13.4 && make clean install; then
     echo ""
   else
     echo "can't move to proper folder"
