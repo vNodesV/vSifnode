@@ -69,7 +69,7 @@ fi
 ##error handling##
 ##################
 echo "##########################################################"
-echo "Install script for Sifnode v0.33.3 with go1.18.3"
+echo "Install script for Sifnode v0.33.5 with go1.18.3"
 echo "##########################################################"
 read -p "Press any key to continue or CTRL-C to abort"
 
@@ -150,7 +150,7 @@ fi
 }
 function giti() {
   # if command cd; then
-    if git checkout v0.13.4 && make clean install; then
+    if git checkout v0.13.5 && make install clean; then
     echo ""
   else
     echo "can't move to proper folder"
