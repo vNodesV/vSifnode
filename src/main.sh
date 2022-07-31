@@ -5,7 +5,7 @@ echo $?
 #####CHANGE THESE#########################################
 ## visit go.dev/dl and copy/paste your desired version. ##
 ##########################################################
-GOV=go1.18.3.linux-amd64.tar.gz
+GOV=go1.18.4.linux-amd64.tar.gz
 FLD=/usr/local/bin/go
 FLD1=$HOME/go
 
@@ -150,7 +150,7 @@ fi
 }
 function giti() {
   # if command cd; then
-    if git checkout v0.13.5 && make install clean; then
+    if git checkout v0.13.5 && make clean install; then
     echo ""
   else
     echo "can't move to proper folder"
