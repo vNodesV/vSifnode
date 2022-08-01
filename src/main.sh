@@ -8,6 +8,8 @@ echo $?
 GOV=go1.18.4.linux-amd64.tar.gz
 FLD=/usr/local/bin/go
 FLD1=$HOME/go
+vSN=v0.13.5
+gSN=0.13.5
 
 ##########################################################
 # echo "Enter Chain Name (ie. Osmosis)"
@@ -144,13 +146,14 @@ function gitd() {
   if command cd; then
   command git clone https://github.com/Sifchain/sifnode.git
   command cd sifnode/
+  mkdir -p $HOME/.sifnoded/cosmovisor/upgrades/$SN/bin
 else
   echo "issue with main git"
 fi
 }
 function giti() {
   # if command cd; then
-    if git checkout v0.13.5 && make clean install; then
+    if git checkout $vSN && make clean install; then
     echo ""
   else
     echo "can't move to proper folder"
@@ -204,8 +207,8 @@ echo "                    Deploying SIFNODE                     "
 echo "##########################################################"
 
 CP1=$(mkdir -p $HOME/.sifnoded/cosmovisor/genesis/bin)
-CP2=$(mkdir $HOME/.sifnoded/cosmovisor/upgrades)
-CP3=$(sudo cp $HOME/go/bin/sifnoded $HOME/.sifnoded/cosmovisor/genesis/bin)
+CP2=$(mkdir -p $HOME/.sifnoded/cosmovisor/upgrades/$SN/bin)
+CP3=$(sudo cp $HOME/go/bin/sifnoded $HOME/.sifnoded/cosmovisor/upgrades/$SN/bin)
 
 function cmd1() {
   command $1
@@ -242,7 +245,7 @@ echo "Variables Export Completed."
 echo ""
 
 function linkSifnoded() {
-sudo ln -s $HOME/.sifnoded/cosmovisor/genesis/bin/sifnoded /usr/local/bin/sifnoded
+sudo ln -s $HOME/.sifnoded/cosmovisor/upgrades/$SN/bin/sifnoded /usr/local/bin/sifnoded
 }
 
 echo "Linking sifnoded"
