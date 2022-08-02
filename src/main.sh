@@ -8,8 +8,8 @@ echo $?
 GOV=go1.18.4.linux-amd64.tar.gz
 FLD=/usr/local/bin/go
 FLD1=$HOME/go
-vSN=v0.13.5
-gSN=0.13.5
+vSN=v0.13.6
+gSN=0.13.6
 
 ##########################################################
 # echo "Enter Chain Name (ie. Osmosis)"
