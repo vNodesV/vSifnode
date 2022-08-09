@@ -1,15 +1,12 @@
 #!/bin/bash
-
-echo $?
-
 #####CHANGE THESE#########################################
 ## visit go.dev/dl and copy/paste your desired version. ##
 ##########################################################
 GOV=go1.18.4.linux-amd64.tar.gz
 FLD=/usr/local/bin/go
 FLD1=$HOME/go
-vSN=v0.13.6
-gSN=0.13.6
+vSN=v0.14.0
+gSN=0.14.0
 
 ##########################################################
 # echo "Enter Chain Name (ie. Osmosis)"
@@ -254,13 +251,16 @@ linkSifnoded
 echo "Sifnoded $(command sifnoded version) installed"
 
 
-echo "##########################################################"
-echo "                        IMPORTANT                         "
-echo "##########################################################"
-echo "##########################################################"
-echo "   When the installation is over, type "source var.var"   "
-echo "##########################################################"
+echo "################################################################"
+echo "                             IMPORTANT                          "
+echo "################################################################"
+echo "################################################################"
+echo "      When the installation is over, type "source var.var"      "
+echo "      You also can add the following to /etc/environment        "
+echo "/home/_your-user-account/cosmovisor/upgrades/0.14.0/bin/sifnoded"
+echo "             then run   source /etc/environment                 "
+echo "################################################################"
 
-echo "##########################################################"
-echo "  Ready for INIT. Have a look at GITHUB and run part2.sh  "
-echo "##########################################################"
+echo "################################################################"
+echo "     Ready for INIT. Have a look at GITHUB and run part2.sh     "
+echo "################################################################"
