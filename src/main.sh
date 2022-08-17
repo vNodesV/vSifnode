@@ -5,8 +5,8 @@
 GOV=go1.18.4.linux-amd64.tar.gz
 FLD=/usr/local/bin/go
 FLD1=$HOME/go
-vSN=v0.14.0
-gSN=0.14.0
+vSN=v0.15.0
+gSN=0.15.0
 
 ##########################################################
 # echo "Enter Chain Name (ie. Osmosis)"
@@ -242,7 +242,7 @@ echo "Variables Export Completed."
 echo ""
 
 function linkSifnoded() {
-sudo ln -s $HOME/.sifnoded/cosmovisor/upgrades/$SN/bin/sifnoded /usr/local/bin/sifnoded
+cp $HOME/.sifnoded/cosmovisor/upgrades/$SN/bin/sifnoded /usr/local/bin/
 }
 
 echo "Linking sifnoded"
@@ -257,7 +257,7 @@ echo "################################################################"
 echo "################################################################"
 echo "      When the installation is over, type "source var.var"      "
 echo "      You also can add the following to /etc/environment        "
-echo "/home/_your-user-account/cosmovisor/upgrades/0.14.0/bin/sifnoded"
+echo "/home/_your-user-account/cosmovisor/upgrades/0.15.0/bin/sifnoded"
 echo "             then run   source /etc/environment                 "
 echo "################################################################"
 
