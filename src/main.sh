@@ -242,7 +242,7 @@ echo "Variables Export Completed."
 echo ""
 
 function linkSifnoded() {
-cp $HOME/.sifnoded/cosmovisor/upgrades/$SN/bin/sifnoded /usr/local/bin/
+sudo cp $HOME/.sifnoded/cosmovisor/upgrades/$SN/bin/sifnoded /usr/local/bin/
 }
 
 echo "Linking sifnoded"
