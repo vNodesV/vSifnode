@@ -46,22 +46,6 @@ Note: Self-thought. This is my first full script and I welcome any constructive 
 - Enter password for sudo
 - You will need to check and approve services restart along the way. 
    - hit OK and restart whatever services are already checked off.
-
-- Once the installation is finish, ource the variables:
-   ```
-   source var.var
-   ```
-
-- You can also add the details to /etc/environment:
-   ```
-   sudo nano /etc/environment
-   ```
-   add at the end " :/home/_your-user-account_/.sifnoded/cosmovisor/upgrades/0.15.0/bin/ " 
-   then:
-   ```
-   source /etc/environment
-   ```
-  
   
   that's it. Now you can configure your node. 
   

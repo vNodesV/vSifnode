@@ -233,7 +233,7 @@ DAEMON_RESTART_AFTER_UPGRADE=true
 DAEMON_ALLOW_DOWNLOAD_BINARIES=false
 DAEMON_NAME=sifnoded
 UNSAFE_SKIP_BACKUP=true
-" > var.var
+" 
 }
 
 exportExport
