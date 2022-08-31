@@ -1,4 +1,4 @@
-## Purpose is to take a fresh Ubuntu installation and deploy everything necessary to have Sifnoded 0.15.0 deployed and ready for confirgation.
+## Purpose is to take a fresh Ubuntu installation and deploy everything necessary to have Sifnoded 0.17.0 deployed and ready for confirgation.
 
 
 
@@ -9,7 +9,7 @@
 - Make
 - jq
 - GO v1.18.4
-- Sifnode v0.15.0
+- Sifnode v0.17.0
 - Cosmovisor v1.0.0
 
 
@@ -24,7 +24,7 @@
 - Download and Install go 1.18.3.linux-amd64 in $HOME<
     - the version can be modified at the top of /src/main.sh<
 - Sys link $HOME/go/bin/go /usr/local/bin/go
-- Deploying Sifnoded v0.15.0.
+- Deploying Sifnoded v0.17.0.
 - Deploying Cosmovisor 1.0.0
 - Export necessery system variables to var.var
 - Sys link $HOME/.sifnoded/cosmovisor/genesis/bin/sifnoded /usr/local/bin/sifnoded
