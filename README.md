@@ -41,7 +41,7 @@ Note: Self-thought. This is my first full script and I welcome any constructive 
 ## INSTRUCTIONS:
 - Download GIT from your home folder and run the install.sh script:
    ```
-   git clone https://github.com/dSebster/vSifnode.git && bash vSifnode/install.sh
+   git clone https://github.com/vNodesV/vSifnode.git && bash vSifnode/install.sh
    ``` 
 - Enter password for sudo
 - You will need to check and approve services restart along the way. 
