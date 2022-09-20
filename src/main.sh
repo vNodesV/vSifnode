@@ -2,11 +2,12 @@
 #####CHANGE THESE#########################################
 ## visit go.dev/dl and copy/paste your desired version. ##
 ##########################################################
-GOV=go1.18.4.linux-amd64.tar.gz
+GOV=go1.18.6.linux-amd64.tar.gz
 FLD=/usr/local/bin/go
+SIFUPG=$HOME/.sifnoded/cosmovisor/$gSN/bin
 FLD1=$HOME/go
-vSN=v0.17.0
-gSN=0.17.0
+vSN=v1.0-beta.11
+gSN=v1.0-beta.11
 
 ##########################################################
 # echo "Enter Chain Name (ie. Osmosis)"
@@ -242,7 +243,9 @@ echo "Variables Export Completed."
 echo ""
 
 function linkSifnoded() {
-sudo cp $HOME/.sifnoded/cosmovisor/upgrades/$SN/bin/sifnoded /usr/local/bin/
+mkdir -p $SIFUPG
+cp $HOME/go/bin/sifnoded $SIFUPG
+ln -s $SIFUPG/sifnoded /usr/local/bin/
 }
 
 echo "Linking sifnoded"
@@ -251,7 +254,7 @@ linkSifnoded
 echo "Sifnoded $(command sifnoded version) installed"
 echo ""
 echo "sifnoded copied to /usr/local/bin. Ready to rock and roll!"
-
+sifnoded version
 
 # echo "################################################################"
 # echo "                             IMPORTANT                          "
