@@ -4,7 +4,6 @@
 ##########################################################
 GOV=go1.18.6.linux-amd64.tar.gz
 FLD=/usr/local/bin/go
-SIFUPG=$HOME/.sifnoded/cosmovisor/$gSN/bin
 FLD1=$HOME/go
 vSN=v1.0-beta.11
 gSN=v1.0-beta.11
@@ -243,9 +242,9 @@ echo "Variables Export Completed."
 echo ""
 
 function linkSifnoded() {
-mkdir -p $SIFUPG
-cp $HOME/go/bin/sifnoded $SIFUPG
-ln -s $SIFUPG/sifnoded /usr/local/bin/
+mkdir -p $HOME/.sifnoded/cosmovisor/upgrades/$gSN/bin
+cp $HOME/go/bin/sifnoded $HOME/.sifnoded/cosmovisor/upgrades/$gSN/bin
+sudo ln -s $HOME/.sifnoded/cosmovisor/upgrades/$gSN/bin/sifnoded /usr/local/bin/
 }
 
 echo "Linking sifnoded"
@@ -253,8 +252,7 @@ echo ""
 linkSifnoded
 echo "Sifnoded $(command sifnoded version) installed"
 echo ""
-echo "sifnoded copied to /usr/local/bin. Ready to rock and roll!"
-sifnoded version
+echo "sifnoded linked to /usr/local/bin. Ready to rock and roll!"
 
 # echo "################################################################"
 # echo "                             IMPORTANT                          "
