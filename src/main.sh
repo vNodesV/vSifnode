@@ -233,8 +233,8 @@ DAEMON_RESTART_AFTER_UPGRADE=true
 DAEMON_ALLOW_DOWNLOAD_BINARIES=false
 DAEMON_NAME=sifnoded
 UNSAFE_SKIP_BACKUP=true
-" 
-}
+" >> var.var
+} 
 
 exportExport
 
@@ -242,9 +242,10 @@ echo "Variables Export Completed."
 echo ""
 
 function linkSifnoded() {
-mkdir -p $HOME/.sifnoded/cosmovisor/upgrades/$gSN/bin
-cp $HOME/go/bin/sifnoded $HOME/.sifnoded/cosmovisor/upgrades/$gSN/bin
-sudo ln -s $HOME/.sifnoded/cosmovisor/upgrades/$gSN/bin/sifnoded /usr/local/bin/
+export GSN="v1.0-beta.11"
+mkdir -p $HOME/.sifnoded/cosmovisor/upgrades/$GSN/bin
+cp $HOME/go/bin/sifnoded $HOME/.sifnoded/cosmovisor/upgrades/$GSN/bin
+sudo ln -s $HOME/.sifnoded/cosmovisor/upgrades/$GSN/bin/sifnoded /usr/local/bin
 }
 
 echo "Linking sifnoded"
