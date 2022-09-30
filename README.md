@@ -9,7 +9,7 @@
 - Make
 - jq
 - GO v1.18.6
-- Sifnode v1.0-beta.11
+- Sifnode v1.0-beta.12
 - Cosmovisor v1.0.0
 
 
