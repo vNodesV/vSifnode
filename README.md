@@ -1,4 +1,4 @@
-## Purpose is to take a fresh Ubuntu installation and deploy everything necessary to have Sifnoded v1.0-beta.11 deployed and ready for confirgation.
+## Purpose is to take a fresh Ubuntu installation and deploy everything necessary to have Sifnoded v1.0-beta.12-issuefix deployed and ready for confirgation.
 
 
 
