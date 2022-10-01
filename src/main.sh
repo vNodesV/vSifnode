@@ -5,8 +5,8 @@
 GOV=go1.18.6.linux-amd64.tar.gz
 FLD=/usr/local/bin/go
 FLD1=$HOME/go
-vSN=v1.0-beta.12
-gSN=v1.0-beta.12
+vSN=v1.0-beta.12-issuefix
+gSN=v1.0-beta.12-issuefix
 
 ##########################################################
 # echo "Enter Chain Name (ie. Osmosis)"
@@ -67,9 +67,9 @@ fi
 }
 ##error handling##
 ##################
-echo "##########################################################"
-echo "Install script for Sifnode v0.33.5 with go1.18.3"
-echo "##########################################################"
+echo "##############################################################"
+echo "Install script for Sifnode v1.0-beta.12-issuefix with go1.18.3"
+echo "#############################################################"
 read -p "Press any key to continue or CTRL-C to abort"
 
 update
