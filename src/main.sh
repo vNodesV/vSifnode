@@ -5,11 +5,8 @@
 GOV=go1.18.6.linux-amd64.tar.gz
 FLD=/usr/local/bin/go
 FLD1=$HOME/go
-vSN=v0.6.7
-gSN=v0.6.7
-gitclone=https://github.com/cheqd/cheqd-node.git
-daemon_name=cheqd-noded
-fld_name=cheqdnode.($vSN)
+vSN=v1.0-beta.12
+gSN=v1.0-beta.12
 
 ##########################################################
 # echo "Enter Chain Name (ie. Osmosis)"
@@ -144,9 +141,9 @@ function install_apps_basics() {
 
 function gitd() {
   if command cd; then
-  command git clone $gitclone
-  command cd $fld_name/
-  mkdir -p $HOME/.$fld_name/cosmovisor/upgrades/$SN/bin
+  command git clone https://github.com/Sifchain/sifnode.git
+  command cd sifnode/
+  mkdir -p $HOME/.sifnoded/cosmovisor/upgrades/$SN/bin
 else
   echo "issue with main git"
 fi
@@ -206,9 +203,9 @@ echo "##########################################################"
 echo "                    Deploying SIFNODE                     "
 echo "##########################################################"
 
-CP1=$(mkdir -p $HOME/.$fld_name/cosmovisor/genesis/bin)
-CP2=$(mkdir -p $HOME/.$fld_name/cosmovisor/upgrades/$SN/bin)
-CP3=$(sudo cp $HOME/go/bin/$daemon_name $HOME/.$fld_name/cosmovisor/upgrades/$vSN/bin)
+CP1=$(mkdir -p $HOME/.sifnoded/cosmovisor/genesis/bin)
+CP2=$(mkdir -p $HOME/.sifnoded/cosmovisor/upgrades/$SN/bin)
+CP3=$(sudo cp $HOME/go/bin/sifnoded $HOME/.sifnoded/cosmovisor/upgrades/$SN/bin)
 
 function cmd1() {
   command $1
@@ -231,10 +228,10 @@ echo "##########################################################"
 function exportExport() {
 touch var.var
 echo "
-DAEMON_HOME=$HOME/.$daemon_name
+DAEMON_HOME=$HOME/.sifnoded
 DAEMON_RESTART_AFTER_UPGRADE=true
 DAEMON_ALLOW_DOWNLOAD_BINARIES=false
-DAEMON_NAME=$daemon_name
+DAEMON_NAME=sifnoded
 UNSAFE_SKIP_BACKUP=true
 " >> var.var
 } 
@@ -245,18 +242,18 @@ echo "Variables Export Completed."
 echo ""
 
 function linkSifnoded() {
-export GSN=$gSN
-mkdir -p $HOME/.$daemon_name/cosmovisor/upgrades/$GSN/bin
-cp $HOME/go/bin/$fld_name $HOME/.$daemon_name/cosmovisor/upgrades/$GSN/bin
-sudo ln -s $HOME/.$daemon_name/cosmovisor/upgrades/$GSN/bin/$daemon_name /usr/local/bin
+export GSN="v1.0-beta.11"
+mkdir -p $HOME/.sifnoded/cosmovisor/upgrades/$GSN/bin
+cp $HOME/go/bin/sifnoded $HOME/.sifnoded/cosmovisor/upgrades/$GSN/bin
+sudo ln -s $HOME/.sifnoded/cosmovisor/upgrades/$GSN/bin/sifnoded /usr/local/bin
 }
 
 echo "Linking sifnoded"
 echo ""
 linkSifnoded
-echo "$daemon_name $(command $daemon_name version) installed"
+echo "Sifnoded $(command sifnoded version) installed"
 echo ""
-echo "$daemon_name linked to /usr/local/bin. Ready to rock and roll!"
+echo "sifnoded linked to /usr/local/bin. Ready to rock and roll!"
 
 # echo "################################################################"
 # echo "                             IMPORTANT                          "
