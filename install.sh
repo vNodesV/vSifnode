@@ -1,5 +1,5 @@
 #!/bin/bash/
-sudo cp $HOME/vSifnode/src/main.sh /usr/local/bin/deploy && 
+sudo cp $HOME/vCheqnode/src/main.sh /usr/local/bin/deploy && 
 sudo chmod +x /usr/local/bin/deploy && 
 sudo chown $USER: /usr/local/bin/deploy &&
 cd $HOME && 
