@@ -2,7 +2,7 @@
 #####CHANGE THESE#########################################
 ## visit go.dev/dl and copy/paste your desired version. ##
 ##########################################################
-GOV=go1.18.6.linux-amd64.tar.gz
+GOV=go1.19.3.linux-amd64.tar.gz
 FLD=/usr/local/bin/go
 FLD1=$HOME/go
 vSN=v1.0.14-beta
