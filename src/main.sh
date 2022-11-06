@@ -5,8 +5,8 @@
 GOV=go1.18.6.linux-amd64.tar.gz
 FLD=/usr/local/bin/go
 FLD1=$HOME/go
-vSN=v1.0-beta.12-issuefix
-gSN=v1.0-beta.12-issuefix
+vSN=v1.0.14-beta
+gSN=v1.0.14-beta
 
 ##########################################################
 # echo "Enter Chain Name (ie. Osmosis)"
